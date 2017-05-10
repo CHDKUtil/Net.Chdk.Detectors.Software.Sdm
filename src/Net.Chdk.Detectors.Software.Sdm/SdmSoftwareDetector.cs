@@ -1,5 +1,6 @@
 ﻿using Net.Chdk.Detectors.Software.Binary;
 using Net.Chdk.Model.Software;
+using Net.Chdk.Providers.Software;
 using System;
 using System.Globalization;
 
@@ -7,7 +8,12 @@ namespace Net.Chdk.Detectors.Software.Sdm
 {
     sealed class SdmSoftwareDetector : InnerBinarySoftwareDetector
     {
-        protected override string Name => "SDM";
+        public SdmSoftwareDetector(ISourceProvider sourceProvider)
+            : base(sourceProvider)
+        {
+        }
+
+        protected override string ProductName => "SDM";
 
         protected override string[] Strings => new[]
         {
@@ -16,7 +22,7 @@ namespace Net.Chdk.Detectors.Software.Sdm
 
         protected override int StringCount => 14;
 
-        protected override Version GetVersion(string[] strings)
+        protected override Version GetProductVersion(string[] strings)
         {
             return GetVersion(strings[3]);
         }
@@ -35,6 +41,16 @@ namespace Net.Chdk.Detectors.Software.Sdm
         {
             string revision = GetRevision(strings);
             return GetCamera(strings[9], revision);
+        }
+
+        protected override string GetSourceName(string[] strings)
+        {
+            return ProductName;
+        }
+
+        protected override string GetSourceChannel(string[] strings)
+        {
+            return string.Empty;
         }
 
         private string GetRevision(string[] strings)
