@@ -11,14 +11,14 @@ namespace Net.Chdk.Detectors.Software.Sdm
 
         protected override string[] Strings => new[]
         {
-            "Writing info file...\0"
+            "Writing info file...\0",
         };
 
-        protected override int StringCount => 11;
+        protected override int StringCount => 14;
 
         protected override Version GetVersion(string[] strings)
         {
-            return Version.Parse(strings[3]);
+            return GetVersion(strings[3]);
         }
 
         protected override CultureInfo GetLanguage(string[] strings)
@@ -28,17 +28,21 @@ namespace Net.Chdk.Detectors.Software.Sdm
 
         protected override DateTime? GetCreationDate(string[] strings)
         {
-            var dateTimeStr = $"{strings[4]} {strings[5]}";
-            return GetCreationDate(dateTimeStr);
+            return GetCreationDate($"{strings[4]} {strings[5]}");
         }
 
         protected override SoftwareCameraInfo GetCamera(string[] strings)
         {
-            return new SoftwareCameraInfo
-            {
-                Platform = strings[9],
-                Revision = strings[10]
-            };
+            string revision = GetRevision(strings);
+            return GetCamera(strings[9], revision);
+        }
+
+        private string GetRevision(string[] strings)
+        {
+            for (var i = 10; i < StringCount; i++)
+                if (strings[i].Length > 0)
+                    return strings[i];
+            return null;
         }
     }
 }
