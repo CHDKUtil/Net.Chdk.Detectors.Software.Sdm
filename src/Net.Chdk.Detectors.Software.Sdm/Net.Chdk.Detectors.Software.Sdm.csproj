@@ -62,6 +62,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Net.Chdk.Detectors.Software.Binary\src\Net.Chdk.Detectors.Software.Binary\Net.Chdk.Detectors.Software.Binary.csproj">
+      <Project>{18181475-991A-41F3-9BBE-F0F0916D8814}</Project>
+      <Name>Net.Chdk.Detectors.Software.Binary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Net.Chdk.Model.Software\src\Net.Chdk.Model.Software\Net.Chdk.Model.Software.csproj">
       <Project>{7F492AD5-C9E5-4E13-9587-D0B88BA8D209}</Project>
       <Name>Net.Chdk.Model.Software</Name>
