@@ -48,11 +48,6 @@ namespace Net.Chdk.Detectors.Software.Sdm
             return ProductName;
         }
 
-        protected override string GetSourceChannel(string[] strings)
-        {
-            return string.Empty;
-        }
-
         private string GetRevision(string[] strings)
         {
             for (var i = 10; i < StringCount; i++)
