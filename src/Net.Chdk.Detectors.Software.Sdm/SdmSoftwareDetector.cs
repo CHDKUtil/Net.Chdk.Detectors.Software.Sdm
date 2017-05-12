@@ -13,7 +13,7 @@ namespace Net.Chdk.Detectors.Software.Sdm
         {
         }
 
-        protected override string ProductName => "SDM";
+        public override string ProductName => "SDM";
 
         protected override string[] Strings => new[]
         {
