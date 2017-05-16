@@ -6,7 +6,7 @@ using System.Globalization;
 
 namespace Net.Chdk.Detectors.Software.Sdm
 {
-    sealed class SdmSoftwareDetector : InnerBinarySoftwareDetector
+    sealed class SdmSoftwareDetector : ProductBinarySoftwareDetector
     {
         public SdmSoftwareDetector(ISourceProvider sourceProvider)
             : base(sourceProvider)
