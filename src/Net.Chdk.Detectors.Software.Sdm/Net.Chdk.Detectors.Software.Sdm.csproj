@@ -74,6 +74,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SdmProductDetector.cs" />
     <Compile Include="SdmSoftwareDetector.cs" />
     <Compile Include="ServiceCollectionExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,6 +87,10 @@
       <Project>{18181475-991A-41F3-9BBE-F0F0916D8814}</Project>
       <Name>Net.Chdk.Detectors.Software.Binary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Net.Chdk.Model.Card\src\Net.Chdk.Model.Card\Net.Chdk.Model.Card.csproj">
+      <Project>{A41D61FE-2FB8-4892-AC7D-ECEE7E61C637}</Project>
+      <Name>Net.Chdk.Model.Card</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Net.Chdk.Model.Software\src\Net.Chdk.Model.Software\Net.Chdk.Model.Software.csproj">
       <Project>{7F492AD5-C9E5-4E13-9587-D0B88BA8D209}</Project>
       <Name>Net.Chdk.Model.Software</Name>
@@ -93,6 +98,10 @@
     <ProjectReference Include="..\..\..\Net.Chdk.Detectors.Software.Core\src\Net.Chdk.Detectors.Software.Core\Net.Chdk.Detectors.Software.Core.csproj">
       <Project>{D385AB93-0DB5-45AA-994A-5E4B671BEF40}</Project>
       <Name>Net.Chdk.Detectors.Software.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Net.Chdk.Providers.Boot.Core\src\Net.Chdk.Providers.Boot.Core\Net.Chdk.Providers.Boot.Core.csproj">
+      <Project>{4E4FA15A-4A88-4CAF-A8E1-FC507177EAD4}</Project>
+      <Name>Net.Chdk.Providers.Boot.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Net.Chdk.Providers.Software.Core\src\Net.Chdk.Providers.Software.Core\Net.Chdk.Providers.Software.Core.csproj">
       <Project>{f763a515-bdb0-4088-8b23-15b02c094485}</Project>

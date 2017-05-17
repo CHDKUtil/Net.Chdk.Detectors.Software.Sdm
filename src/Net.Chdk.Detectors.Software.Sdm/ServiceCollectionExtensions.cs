@@ -9,5 +9,11 @@ namespace Net.Chdk.Detectors.Software.Sdm
             return serviceCollection
                 .AddSingleton<IProductBinarySoftwareDetector, SdmSoftwareDetector>();
         }
+
+        public static IServiceCollection AddSdmProductDetector(this IServiceCollection serviceCollection)
+        {
+            return serviceCollection
+                .AddSingleton<IProductDetector, SdmProductDetector>();
+        }
     }
 }
