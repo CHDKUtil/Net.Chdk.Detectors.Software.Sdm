@@ -74,6 +74,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SdmAdHocSoftwareDetector.cs" />
     <Compile Include="SdmProductDetector.cs" />
     <Compile Include="SdmSoftwareDetector.cs" />
     <Compile Include="ServiceCollectionExtensions.cs" />
