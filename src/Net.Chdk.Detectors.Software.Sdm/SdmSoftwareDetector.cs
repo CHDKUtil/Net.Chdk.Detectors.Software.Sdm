@@ -1,5 +1,4 @@
 ﻿using Net.Chdk.Detectors.Software.Binary;
-using Net.Chdk.Model.Software;
 using Net.Chdk.Providers.Software;
 using System;
 using System.Globalization;
@@ -37,18 +36,12 @@ namespace Net.Chdk.Detectors.Software.Sdm
             return GetCreationDate($"{strings[4]} {strings[5]}");
         }
 
-        protected override SoftwareCameraInfo GetCamera(string[] strings)
+        protected override string GetPlatform(string[] strings)
         {
-            string revision = GetRevision(strings);
-            return GetCamera(strings[9], revision);
+            return strings[9];
         }
 
-        protected override string GetSourceName(string[] strings)
-        {
-            return ProductName;
-        }
-
-        private string GetRevision(string[] strings)
+        protected override string GetRevision(string[] strings)
         {
             for (var i = 10; i < StringCount; i++)
                 if (strings[i].Length > 0)
