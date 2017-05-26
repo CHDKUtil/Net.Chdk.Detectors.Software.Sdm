@@ -59,7 +59,7 @@ namespace Net.Chdk.Detectors.Software.Sdm
             if (nLine == null)
                 return null;
 
-            var nStr = nLine.Substring("n=".Length);
+            var nStr = nLine.TrimStart("n=");
             if (nStr == null)
                 return null;
 
