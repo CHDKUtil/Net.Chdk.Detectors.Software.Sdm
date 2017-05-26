@@ -23,10 +23,12 @@ namespace Net.Chdk.Detectors.Software.Sdm
             [290] = "2.1",
         };
 
-        public SdmProductDetector(IBootProvider bootProvider)
-            : base(bootProvider)
+        public SdmProductDetector(IBootProviderResolver bootProviderResolver)
+            : base(bootProviderResolver)
         {
         }
+
+        public override string CategoryName => "PS";
 
         protected override string ProductName => "SDM";
 
