@@ -13,12 +13,9 @@ namespace Net.Chdk.Detectors.Software.Sdm
 
         public override string ProductName => "SDM";
 
-        protected override int StringCount => 2;
+        protected override string String => "SDM ver. ";
 
-        protected override string[] Strings => new[]
-        {
-            "SDM ver. ",
-        };
+        protected override int StringCount => 2;
 
         protected override Version GetProductVersion(string[] strings)
         {
