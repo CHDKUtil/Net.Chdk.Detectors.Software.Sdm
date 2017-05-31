@@ -13,6 +13,8 @@ namespace Net.Chdk.Detectors.Software.Sdm
 
         public override string ProductName => "SDM";
 
+        protected override string CategoryName => "PS";
+
         protected override string String => "SDM ver. ";
 
         protected override int StringCount => 2;

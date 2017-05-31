@@ -14,6 +14,8 @@ namespace Net.Chdk.Detectors.Software.Sdm
 
         public override string ProductName => "SDM";
 
+        protected override string CategoryName => "PS";
+
         protected override string String => "Writing info file...\0";
 
         protected override int StringCount => 14;
