@@ -77,6 +77,7 @@
     <Compile Include="SdmAdHocSoftwareDetector.cs" />
     <Compile Include="SdmProductDetector.cs" />
     <Compile Include="SdmSoftwareDetector.cs" />
+    <Compile Include="SdmSoftwareDetectorBase.cs" />
     <Compile Include="ServiceCollectionExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

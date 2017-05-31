@@ -1,22 +1,16 @@
-﻿using Net.Chdk.Detectors.Software.Binary;
-using Net.Chdk.Providers.Software;
+﻿using Net.Chdk.Providers.Software;
 using System;
 
 namespace Net.Chdk.Detectors.Software.Sdm
 {
-    sealed class SdmAdHocSoftwareDetector : ProductBinarySoftwareDetector
+    sealed class SdmAdHocSoftwareDetector : SdmSoftwareDetectorBase
     {
         public SdmAdHocSoftwareDetector(ISourceProvider sourceProvider)
             : base(sourceProvider)
         {
         }
 
-        public override string ProductName => "SDM";
-
-        protected override string CategoryName => "PS";
-
         protected override string String => "SDM ver. ";
-
         protected override int StringCount => 2;
 
         protected override Version GetProductVersion(string[] strings)
