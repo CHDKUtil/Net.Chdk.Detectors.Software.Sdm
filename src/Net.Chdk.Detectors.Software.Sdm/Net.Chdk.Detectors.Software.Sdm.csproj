@@ -58,6 +58,21 @@
     <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=1.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Extensions.Logging.Abstractions.1.1.2\lib\netstandard1.1\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="Net.Chdk.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Net.Chdk.Core.0.2.0-alpha\lib\netstandard1.0\Net.Chdk.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Net.Chdk.Json, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Net.Chdk.Json.0.1.0-alpha\lib\netstandard1.0\Net.Chdk.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Net.Chdk.Model.Category, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Net.Chdk.Model.Category.0.1.0-alpha\lib\netstandard1.0\Net.Chdk.Model.Category.dll</HintPath>
+    </Reference>
+    <Reference Include="Net.Chdk.Model.Software, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Net.Chdk.Model.Software.0.1.0-alpha\lib\netstandard1.0\Net.Chdk.Model.Software.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
@@ -85,21 +100,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Net.Chdk.Core\src\Net.Chdk.Core\Net.Chdk.Core.csproj">
-      <Project>{6C183A9C-30C1-47E5-9016-48890EC8ABA2}</Project>
-      <Name>Net.Chdk.Core</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\Net.Chdk.Detectors.Software.Binary\src\Net.Chdk.Detectors.Software.Binary\Net.Chdk.Detectors.Software.Binary.csproj">
       <Project>{18181475-991A-41F3-9BBE-F0F0916D8814}</Project>
       <Name>Net.Chdk.Detectors.Software.Binary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Net.Chdk.Model.Card\src\Net.Chdk.Model.Card\Net.Chdk.Model.Card.csproj">
-      <Project>{A41D61FE-2FB8-4892-AC7D-ECEE7E61C637}</Project>
-      <Name>Net.Chdk.Model.Card</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Net.Chdk.Model.Software\src\Net.Chdk.Model.Software\Net.Chdk.Model.Software.csproj">
-      <Project>{7F492AD5-C9E5-4E13-9587-D0B88BA8D209}</Project>
-      <Name>Net.Chdk.Model.Software</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Net.Chdk.Detectors.Software.Core\src\Net.Chdk.Detectors.Software.Core\Net.Chdk.Detectors.Software.Core.csproj">
       <Project>{D385AB93-0DB5-45AA-994A-5E4B671BEF40}</Project>
