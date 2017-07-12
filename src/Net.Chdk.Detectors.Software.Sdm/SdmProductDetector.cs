@@ -1,5 +1,6 @@
 ﻿using Net.Chdk.Detectors.Software.Product;
 using Net.Chdk.Providers.Boot;
+using Net.Chdk.Providers.Product;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -23,12 +24,10 @@ namespace Net.Chdk.Detectors.Software.Sdm
             [290] = "2.1",
         };
 
-        public SdmProductDetector(IBootProviderResolver bootProviderResolver)
-            : base(bootProviderResolver)
+        public SdmProductDetector(IProductProvider productProvider, IBootProvider bootProvider)
+            : base(productProvider, bootProvider)
         {
         }
-
-        public override string CategoryName => "PS";
 
         protected override string ProductName => "SDM";
 
