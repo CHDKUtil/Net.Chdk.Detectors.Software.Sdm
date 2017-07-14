@@ -1,4 +1,5 @@
-﻿using Net.Chdk.Providers.Software;
+﻿using Net.Chdk.Providers.Product;
+using Net.Chdk.Providers.Software;
 using System;
 using System.Globalization;
 
@@ -6,8 +7,8 @@ namespace Net.Chdk.Detectors.Software.Sdm
 {
     sealed class SdmSoftwareDetector : SdmSoftwareDetectorBase
     {
-        public SdmSoftwareDetector(ISourceProvider sourceProvider)
-            : base(sourceProvider)
+        public SdmSoftwareDetector(IProductProvider productProvider, ISourceProvider sourceProvider)
+            : base(productProvider, sourceProvider)
         {
         }
 

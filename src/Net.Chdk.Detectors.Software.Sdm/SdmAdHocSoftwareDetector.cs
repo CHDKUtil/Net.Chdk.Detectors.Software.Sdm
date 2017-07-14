@@ -1,12 +1,13 @@
-﻿using Net.Chdk.Providers.Software;
+﻿using Net.Chdk.Providers.Product;
+using Net.Chdk.Providers.Software;
 using System;
 
 namespace Net.Chdk.Detectors.Software.Sdm
 {
     sealed class SdmAdHocSoftwareDetector : SdmSoftwareDetectorBase
     {
-        public SdmAdHocSoftwareDetector(ISourceProvider sourceProvider)
-            : base(sourceProvider)
+        public SdmAdHocSoftwareDetector(IProductProvider productProvider, ISourceProvider sourceProvider)
+            : base(productProvider, sourceProvider)
         {
         }
 
