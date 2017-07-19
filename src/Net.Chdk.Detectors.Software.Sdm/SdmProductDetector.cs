@@ -43,7 +43,7 @@ namespace Net.Chdk.Detectors.Software.Sdm
 
         protected override CultureInfo GetLanguage(string rootPath)
         {
-            return CultureInfo.GetCultureInfo("en");
+            return new CultureInfo("en");
         }
 
         private static Version GetVersionFromProperties(string rootPath)
@@ -56,7 +56,7 @@ namespace Net.Chdk.Detectors.Software.Sdm
             if (lines == null)
                 return null;
 
-            var nLine = lines.FirstOrDefault(l => l.StartsWith("n=", StringComparison.InvariantCulture));
+            var nLine = lines.FirstOrDefault(l => l.StartsWith("n=", StringComparison.Ordinal));
             if (nLine == null)
                 return null;
 
@@ -64,12 +64,10 @@ namespace Net.Chdk.Detectors.Software.Sdm
             if (nStr == null)
                 return null;
 
-            int n;
-            if (!int.TryParse(nStr, out n))
+            if (!int.TryParse(nStr, out int n))
                 return null;
 
-            string versionStr;
-            if (!PropsVersions.TryGetValue(n, out versionStr))
+            if (!PropsVersions.TryGetValue(n, out string versionStr))
                 return null;
 
             return Version.Parse(versionStr);
