@@ -43,7 +43,7 @@ namespace Net.Chdk.Detectors.Software.Sdm
 
         protected override CultureInfo GetLanguage(string rootPath)
         {
-            return new CultureInfo("en");
+            return GetCultureInfo("en");
         }
 
         private static Version GetVersionFromProperties(string rootPath)

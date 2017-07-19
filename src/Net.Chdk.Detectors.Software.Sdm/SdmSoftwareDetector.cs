@@ -22,7 +22,7 @@ namespace Net.Chdk.Detectors.Software.Sdm
 
         protected override CultureInfo GetLanguage(string[] strings)
         {
-            return new CultureInfo("en");
+            return GetCultureInfo("en");
         }
 
         protected override DateTime? GetCreationDate(string[] strings)
